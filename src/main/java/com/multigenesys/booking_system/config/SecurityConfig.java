@@ -3,7 +3,7 @@ package com.multigenesys.booking_system.config;
 import com.multigenesys.booking_system.authentication_provider.JWTAuthenticationProvider;
 import com.multigenesys.booking_system.filters.JwtValidationFilter;
 import com.multigenesys.booking_system.services.UserDetailsServiceImpl;
-import com.multigenesys.booking_system.util.JwtUtil;
+import com.multigenesys.booking_system.utilis.JwtUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

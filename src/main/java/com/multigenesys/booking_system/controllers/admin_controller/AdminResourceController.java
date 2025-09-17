@@ -1,7 +1,7 @@
 package com.multigenesys.booking_system.controllers.admin_controller;
 
-import com.multigenesys.booking_system.dto.ResourceRequestDto;
-import com.multigenesys.booking_system.dto.ResourceResponseDto;
+import com.multigenesys.booking_system.dto.request.ResourceRequestDto;
+import com.multigenesys.booking_system.dto.response.ResourceResponseDto;
 import com.multigenesys.booking_system.exception.ResourceAlreadyExistException;
 import com.multigenesys.booking_system.exception.ResourceNotFoundException;
 import com.multigenesys.booking_system.services.ResourceService;
@@ -12,7 +12,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController

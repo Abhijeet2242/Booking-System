@@ -1,7 +1,7 @@
 package com.multigenesys.booking_system.services;
 
-import com.multigenesys.booking_system.dto.UserRequestDto;
-import com.multigenesys.booking_system.dto.UserResponseDto;
+import com.multigenesys.booking_system.dto.request.UserRequestDto;
+import com.multigenesys.booking_system.dto.response.UserResponseDto;
 import com.multigenesys.booking_system.exception.UserAlreadyExistException;
 import com.multigenesys.booking_system.mapper.UserMapper;
 import com.multigenesys.booking_system.model.Role;
@@ -12,8 +12,6 @@ import com.multigenesys.booking_system.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor

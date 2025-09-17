@@ -1,4 +1,4 @@
-package com.multigenesys.booking_system.dto;
+package com.multigenesys.booking_system.dto.request;
 
 import com.multigenesys.booking_system.model.enums.ResourceType;
 import lombok.Getter;

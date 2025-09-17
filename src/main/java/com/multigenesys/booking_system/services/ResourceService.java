@@ -1,7 +1,7 @@
 package com.multigenesys.booking_system.services;
 
-import com.multigenesys.booking_system.dto.ResourceRequestDto;
-import com.multigenesys.booking_system.dto.ResourceResponseDto;
+import com.multigenesys.booking_system.dto.request.ResourceRequestDto;
+import com.multigenesys.booking_system.dto.response.ResourceResponseDto;
 import com.multigenesys.booking_system.exception.ResourceAlreadyExistException;
 import com.multigenesys.booking_system.exception.ResourceNotFoundException;
 import com.multigenesys.booking_system.mapper.ResourceMapper;
@@ -9,12 +9,9 @@ import com.multigenesys.booking_system.model.Resource;
 import com.multigenesys.booking_system.repositories.ResourceRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 public class ResourceService {

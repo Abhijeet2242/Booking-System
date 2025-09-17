@@ -22,6 +22,8 @@ public class Resource {
     @Enumerated(EnumType.STRING)
     private ResourceType resourceType;
 
+
+
     private Integer capacity;
     private Boolean active = true;
 

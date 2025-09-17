@@ -1,7 +1,7 @@
 package com.multigenesys.booking_system.mapper;
 
-import com.multigenesys.booking_system.dto.UserRequestDto;
-import com.multigenesys.booking_system.dto.UserResponseDto;
+import com.multigenesys.booking_system.dto.request.UserRequestDto;
+import com.multigenesys.booking_system.dto.response.UserResponseDto;
 import com.multigenesys.booking_system.model.Role;
 import com.multigenesys.booking_system.model.User;
 import org.springframework.stereotype.Component;

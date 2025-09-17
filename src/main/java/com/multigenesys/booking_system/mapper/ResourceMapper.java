@@ -1,7 +1,7 @@
 package com.multigenesys.booking_system.mapper;
 
-import com.multigenesys.booking_system.dto.ResourceRequestDto;
-import com.multigenesys.booking_system.dto.ResourceResponseDto;
+import com.multigenesys.booking_system.dto.request.ResourceRequestDto;
+import com.multigenesys.booking_system.dto.response.ResourceResponseDto;
 import com.multigenesys.booking_system.model.Resource;
 import org.springframework.stereotype.Component;
 

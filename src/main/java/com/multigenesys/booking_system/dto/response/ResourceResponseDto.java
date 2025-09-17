@@ -1,4 +1,4 @@
-package com.multigenesys.booking_system.dto;
+package com.multigenesys.booking_system.dto.response;
 
 import lombok.Getter;
 import lombok.Setter;

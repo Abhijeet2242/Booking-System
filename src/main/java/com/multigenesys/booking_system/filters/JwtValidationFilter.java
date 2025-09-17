@@ -23,20 +23,37 @@ public class JwtValidationFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
-                                    FilterChain filterChain) throws ServletException, IOException {
+                                    FilterChain filterChain)
+            throws ServletException, IOException {
 
-        String token = extractJwtFromRequest(request);
-        if (token != null) {
+        String token = null;
 
-            JwtAuthenticationToken authenticationToken = new JwtAuthenticationToken(token);
-            Authentication authResult = authenticationManager.authenticate(authenticationToken);
-            if(authResult.isAuthenticated()) {
-                SecurityContextHolder.getContext().setAuthentication(authResult);
+        // 1. Check Authorization header
+        String header = request.getHeader("Authorization");
+        if (header != null && header.startsWith("Bearer ")) {
+            token = header.substring(7);
+        }
+
+        // 2. Check cookies if token not in header
+        if (token == null && request.getCookies() != null) {
+            for (Cookie cookie : request.getCookies()) {
+                if ("JWT_TOKEN".equals(cookie.getName())) {
+                    token = cookie.getValue();
+                }
             }
+        }
+
+        // 3. Validate token and set authentication
+        if (token != null && jwtUtil.validateToken(token)) {
+            String username = jwtUtil.validateAndExtractUsername(token);
+            UsernamePasswordAuthenticationToken authentication =
+                    new UsernamePasswordAuthenticationToken(username, null, Collections.emptyList());
+            SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
         filterChain.doFilter(request, response);
     }
+
 
     private String extractJwtFromRequest(HttpServletRequest request) {
         // Check Authorization header

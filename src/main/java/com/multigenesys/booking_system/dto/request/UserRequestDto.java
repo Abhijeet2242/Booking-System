@@ -1,4 +1,4 @@
-package com.multigenesys.booking_system.dto;
+package com.multigenesys.booking_system.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

@@ -1,4 +1,4 @@
-package com.multigenesys.booking_system.util;
+package com.multigenesys.booking_system.utilis;
 
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
